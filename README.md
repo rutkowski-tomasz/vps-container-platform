@@ -30,3 +30,28 @@ docker context create vps --docker "host=ssh://deploy@$(terraform output -raw ip
 docker context use vps
 docker stack deploy -c compose.yaml example
 ```
+
+# 🛣️ Roadmap
+
+Infra:
+- Stack monitoring
+- Domain name setup
+- platform arm64 integration
+
+Gateway:
+- Load balancing
+- Reverse proxy
+- Rate limiting
+- Auth
+- Https setup
+- traefik vs YARP
+
+Frontend:
+- FE hosting
+- CloudFront + s3 (terraform)
+
+Services (lightweight example with opentelemetry)
+- At least 2 downstreams
+- Dotnet 9
+- Express
+- database hosting, S3 backups, monitoring.
